@@ -38,19 +38,15 @@ void setup() {
 
 void loop() {
 
-    // TODO 7:
-    // Read humidity value from sensor
+   // TODO 4: Initialize Serial communication
+    Serial.begin(9600);
 
-    // TODO 8:
-    // Read temperature value from sensor
+    // TODO 5: Initialize the DHT sensor
+    dht.begin();
 
-    // TODO 9:
-    // Check if either reading failed using isnan()
-    // If failed, print error message and return
-
-    // TODO 10:
-    // Print formatted temperature and humidity values
-
-    // TODO 11:
-    // Add a 2-second delay before next reading
+    // TODO 6: Print system initialization message
+    Serial.println("======================================");
+    Serial.println("  DHT11 Temperature & Humidity System");
+    Serial.println("  System Initialized Successfully");
+    Serial.println("======================================");
 }
