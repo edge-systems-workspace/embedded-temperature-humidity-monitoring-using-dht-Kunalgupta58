@@ -23,14 +23,17 @@ DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
 
-    // TODO 4:
-    // Initialize Serial communication (9600 baud rate)
+    // TODO 4: Initialize Serial communication
+    Serial.begin(9600);
 
-    // TODO 5:
-    // Initialize the DHT sensor
+    // TODO 5: Initialize the DHT sensor
+    dht.begin();
 
-    // TODO 6:
-    // Print a system initialization message
+    // TODO 6: Print system initialization message
+    Serial.println("======================================");
+    Serial.println("  DHT11 Temperature & Humidity System");
+    Serial.println("  System Initialized Successfully");
+    Serial.println("======================================");
 }
 
 void loop() {
